@@ -197,6 +197,10 @@ desc tbl_test09;
 alter table tbl_test09 alter column age drop default;
 desc tbl_test09;
 
+set foreign_key_checks =0;
+drop table tbl_test02;
+set foreign_key_checks=1;
+
 
 
 
