@@ -1,0 +1,40 @@
+실행 -> sysdm.cpl -> 고급 -> 환경변수 -> 시스템 변수 Path 편집 -> mysql 파일 주소 넣기
+ cmd -> mysql -u root -p -h 127.0.0.1
+mysql installer - community -> Applications -> workbench -> mysql workbench 8.0.33 클릭 products에 넣기 -> 실행
+
+mysql cmd 창에서 스키마 만들기
+create database test1db;
+
+mysql cmd 창에서 스키마 드랍하기
+drop database test2db;
+
+mysql 테이블 마들기
+test1db 스키마 에서 tables 우클릭 create table -> table name 설정 -> 
+
+SELECT 중요
+use test2db; : test2db에서 작업할거임
+
+ctrl + c : 빠져나가기
+
+default 값 = 기본 설정 값 . default 값이 null인 경우 데이터가 입력되지 않을 때 null 값이 들어감
+데이터 타입이 not null일 경우 오류가 발생할 수 있음
+
+where 조건 절에서 primary키가 아닌 키로 사용할 경우 중복된 데이터들이 모두 삭제될 수 있음
+
+db 확인 : show databases;
+tbl 확인 : show tables;
+tbl 구조 확인 : desc 테이블명;
+삽입 : insert into 테이블명(열1,열2 ...) values (값1, 값2...);
+수정 : update 테이블명  set 열이름 = 값, 열이름 = 값 where 열이름=값;
+삭제 : delete from 테이블명 where 열이름=값;
+조회 : select *from 테이블명;
+db 생성 : create database 데이터베이스명;
+생성 : create table 테이블명(열1 자료형[제약조건], 열2 자료형 [제약조건]..);
+tbl구조 변경 : [열추가] alter table 테이블명 add column 열이름 자료형 [제약조건] [after 열이름]
+tbl구조 변경 : [열변경] alter table 테이블명 change column 기존열이름 바꿀열이름 자료형 [제약조건]
+tbl구조 변경 : [열삭제] alter table 테이블명 drop column 열이름  
+: 
+tbl 삭제 : 
+
+db 삭제 : drop db명;
+tbl 삭제 : drop 테이블명;
